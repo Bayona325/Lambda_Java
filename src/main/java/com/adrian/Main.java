@@ -85,6 +85,7 @@ public class Main {
                 .filter((camper) -> camper.getNombre().contains(null))
                 .map((c) -> 1)
                 .reduce(0, (acomulador, item) -> acomulador + item);
+        System.out.println("Nombres de campers: " + nombres);
         // Calcular la suma de las edades
         // Calcular el promedio de las edades
         // Calcular el promedio de las edades por Sexo
