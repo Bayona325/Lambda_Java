@@ -75,7 +75,16 @@ public class Main {
         System.out.println("Otros: " + otros);
 
         // Filtrar campers mayores de edad
+        var adulto = campers.stream()
+                .filter((camper) -> camper.getEdad() >= 18)
+                .map((c) -> 1)
+                .reduce(0, (acomulador, item) -> acomulador + item);
+        System.out.println("Campers mayores o con 18 años: " + adulto);
         // Obtener los nombres de las campers
+        var nombres = campers.stream()
+                .filter((camper) -> camper.getNombre().contains(null))
+                .map((c) -> 1)
+                .reduce(0, (acomulador, item) -> acomulador + item);
         // Calcular la suma de las edades
         // Calcular el promedio de las edades
         // Calcular el promedio de las edades por Sexo
